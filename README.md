@@ -1,0 +1,1 @@
+GAP (acrónimo de Groups, Algorithms and Programming; en español, Grupos, Algoritmos y Programación) es un sistema algebraico computacional (CAS) especialmente orientado a teoría de grupos, aunque también es útil para otras muchas ramas de la matemática.
