@@ -8,5 +8,5 @@ tiq := function(n)
         q:=[2^(n)*p[1]*p[2],2^(n)*p[3]];
         return q;
     fi;
-    return "El natural indtroducido no genera una pareja de números amigos por el método de Thabit ibn Qurrá.";
+    return "El natural introducido no genera una pareja de números amigos por el método de Thabit ibn Qurrá.";
 end;
