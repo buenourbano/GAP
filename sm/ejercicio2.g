@@ -1,3 +1,5 @@
+#En este ejercicio definimos la clase de las fracciones y las operaciones básicas que podemos desarrollar con ellas.
+
 DeclareRepresentation("EsFraccionRep", IsAttributeStoringRep, []);
 DeclareCategory( "EsFraccion", EsFraccionRep and IsAdditiveElement and IsMultiplicativeElementWithInverse);
 TipoFraccion:=NewType(NewFamily("FamiliaFracciones"), EsFraccion);
@@ -95,8 +97,6 @@ InstallMethod(\*, "multiplicacion de fracciones", [EsFraccion, EsFraccion],
             return resultado;
         fi;
 end);
-
-#A partir de aquí definimos las operaciones del ejercicio
 
 InstallMethod(\*, "multiplicacion de fracciones por enteros a la derecha", [EsFraccion, IsInt],
     function(x,y)
