@@ -91,11 +91,7 @@ InstallMethod(\*, "multiplicacion de fracciones", [EsFraccion, EsFraccion],
     function(x,y)
         local resultado;
         resultado:=Simplifica(Fraccion(Numerador(x)*Numerador(y),Denominador(x)*Denominador(y)));
-        if Denominador(resultado)=1 then
-            return Numerador(resultado);
-        else
-            return resultado;
-        fi;
+        return resultado;
 end);
 
 InstallMethod(\*, "multiplicacion de fracciones por enteros a la derecha", [EsFraccion, IsInt],
@@ -103,11 +99,7 @@ InstallMethod(\*, "multiplicacion de fracciones por enteros a la derecha", [EsFr
         local d,resultado;
         d:=Fraccion(y,1);
         resultado:=Simplifica(Fraccion(Numerador(x)*Numerador(d),Denominador(x)*Denominador(d)));
-        if Denominador(resultado)=1 then
-            return Numerador(resultado);
-        else
-            return resultado;
-        fi;
+        return resultado;
 end);
 
 InstallMethod(\*, "multiplicacion de fracciones por enteros a la izquierda", [IsInt, EsFraccion],
@@ -115,29 +107,15 @@ InstallMethod(\*, "multiplicacion de fracciones por enteros a la izquierda", [Is
         local d, resultado;
         d:=Fraccion(x,1);
         resultado:=Simplifica(Fraccion(Numerador(y)*Numerador(d),Denominador(y)*Denominador(d)));
-        if Denominador(resultado)=1 then
-            return Numerador(resultado);
-        else
-            return resultado;
-        fi;
+        return resultado;
 end);
 
 InstallMethod(Inverso, "inverso para fracciones", [EsFraccion],
     function(x)
-        if Numerador(x)=1 then
-            return Denominador(x);
-        else
-            return Simplifica(Fraccion(Denominador(x),Numerador(x)));
-        fi;
+        return Simplifica(Fraccion(Denominador(x),Numerador(x)));
 end);
 
 InstallMethod(Media, "media para fracciones", [EsFraccion, EsFraccion],
     function(x,y)
-        local resultado;
-        resultado:=Simplifica((x+y)*Fraccion(1,2));
-        if Denominador(resultado)=1 then
-            return Numerador(resultado);
-        else
-            return resultado;
-        fi;
+        return resultado;
 end);
