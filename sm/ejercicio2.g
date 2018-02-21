@@ -117,5 +117,6 @@ end);
 
 InstallMethod(Media, "media para fracciones", [EsFraccion, EsFraccion],
     function(x,y)
+        resultado:=Simplifica((x+y)*Fraccion(1,2));
         return resultado;
 end);
